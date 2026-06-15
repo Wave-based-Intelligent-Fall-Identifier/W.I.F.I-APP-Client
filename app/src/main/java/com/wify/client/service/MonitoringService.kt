@@ -41,7 +41,7 @@ class MonitoringService : Service() {
             NOTIF_ID,
             buildNotification(),
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                ServiceInfo.FOREGROUND_SERVICE_TYPE_CONNECTED_DEVICE
+                ServiceInfo.FOREGROUND_SERVICE_TYPE_DATA_SYNC
             } else {
                 0
             },
