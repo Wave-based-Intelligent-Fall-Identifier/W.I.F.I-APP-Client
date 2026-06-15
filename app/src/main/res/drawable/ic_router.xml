@@ -1,0 +1,42 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="160dp"
+    android:height="120dp"
+    android:viewportWidth="160"
+    android:viewportHeight="120">
+
+    <!-- 안테나 (좌/우) -->
+    <path
+        android:pathData="M64,62 L52,26"
+        android:strokeColor="#222222"
+        android:strokeWidth="6"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M96,62 L116,22"
+        android:strokeColor="#222222"
+        android:strokeWidth="6"
+        android:strokeLineCap="round" />
+
+    <!-- 본체 그림자 -->
+    <path
+        android:pathData="M44,92 m-8,0 a8,8 0 0 0 8,8 h76 a8,8 0 0 0 8,-8 z"
+        android:fillColor="#1A1A1A"
+        android:fillAlpha="0.25" />
+
+    <!-- 공유기 본체 (둥근 사다리꼴) -->
+    <path
+        android:pathData="M48,60 h64 a14,14 0 0 1 13,9 l6,16 a8,8 0 0 1 -7.5,11 h-87 a8,8 0 0 1 -7.5,-11 l6,-16 a14,14 0 0 1 13,-9 z"
+        android:fillColor="#2B2B2B" />
+
+    <!-- 상단 하이라이트 -->
+    <path
+        android:pathData="M52,64 h56 a10,10 0 0 1 9,6 h-83 a10,10 0 0 1 9,-6 z"
+        android:fillColor="#3A3A3A" />
+
+    <!-- LED 표시등 -->
+    <path
+        android:pathData="M58,86 m-3,0 a3,3 0 1 0 6,0 a3,3 0 1 0 -6,0"
+        android:fillColor="#7BD88F" />
+    <path
+        android:pathData="M72,86 m-3,0 a3,3 0 1 0 6,0 a3,3 0 1 0 -6,0"
+        android:fillColor="#5A5A5A" />
+</vector>

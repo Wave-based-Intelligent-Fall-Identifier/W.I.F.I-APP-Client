@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  디버그 빌드 전용 매니페스트. 릴리스 빌드에는 병합되지 않는다.
+  INTERNET 은 이제 main 매니페스트(MQTT 연결용)에 있으므로 여기서는 추가 권한이 필요 없다.
+  DebugInjectionServer(ServerSocket)도 INTERNET 권한을 공유한다.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" />

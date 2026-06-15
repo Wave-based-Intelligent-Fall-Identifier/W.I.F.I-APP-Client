@@ -1,0 +1,32 @@
+@page { size: A4; margin: 18mm 16mm; }
+* { box-sizing: border-box; }
+body {
+  font-family: "Malgun Gothic", "맑은 고딕", -apple-system, "Segoe UI", sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.55;
+  color: #1a1a1a;
+  max-width: 100%;
+}
+h1 { font-size: 20pt; border-bottom: 3px solid #f0635a; padding-bottom: 6px; margin-top: 0; }
+h2 { font-size: 14pt; border-bottom: 1px solid #ddd; padding-bottom: 3px; margin-top: 22px; color: #111; }
+h3 { font-size: 12pt; margin-top: 16px; }
+blockquote {
+  border-left: 4px solid #d9d9de; margin: 10px 0; padding: 4px 14px;
+  color: #555; background: #f7f7f9;
+}
+code {
+  font-family: "Consolas", "D2Coding", monospace; font-size: 9.5pt;
+  background: #f0f0f4; padding: 1px 4px; border-radius: 3px; color: #c0341d;
+}
+pre {
+  background: #1e1e2a; color: #e6e6ea; padding: 12px 14px; border-radius: 6px;
+  font-size: 9pt; line-height: 1.4; overflow-x: auto; page-break-inside: avoid;
+}
+pre code { background: none; color: inherit; padding: 0; }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: 9.5pt; page-break-inside: avoid; }
+th, td { border: 1px solid #ccc; padding: 5px 8px; text-align: left; vertical-align: top; }
+th { background: #efeff4; font-weight: 700; }
+tr:nth-child(even) td { background: #fafafb; }
+a { color: #1e6fd9; text-decoration: none; }
+hr { border: none; border-top: 1px solid #e0e0e0; margin: 20px 0; }
+h2, h3 { page-break-after: avoid; }
