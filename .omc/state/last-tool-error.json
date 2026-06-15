@@ -1,7 +1,0 @@
-{
-  "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"echo \\\"===== W.I.F.I-APP-Client remote main =====\\\"; gh api repos/Wave-based-Intelligent-Fall-Identifier/W.I.F.I-APP-Client/commits/main --jq '.sha[0:7] + \\\"  \\\" + .commit.message' 2>&1 | ...",
-  "error": "Exit code 1\n===== W.I.F.I-APP-Client remote main =====\n23c9261  Seed MQTT client app (migrated from BLE)\n===== local client repo status =====\n23c9261 Seed MQTT client app (migrated from BLE)\n6aa1433 Initial commit\n--- working tree ---\n?? .omc/",
-  "timestamp": "2026-06-15T13:00:10.071Z",
-  "retry_count": 1
-}
