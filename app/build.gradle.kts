@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.wify_app_android"
+    namespace = "com.wify.client"
     compileSdk {
         version = release(36) {
             minorApiLevel = 1
@@ -12,7 +12,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.wify_app_android"
+        applicationId = "com.wify.client"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
