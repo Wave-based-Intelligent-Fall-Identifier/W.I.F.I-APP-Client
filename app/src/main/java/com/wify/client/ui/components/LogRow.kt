@@ -56,7 +56,7 @@ fun LogRow(
             if (deviceName != null) {
                 Spacer(Modifier.height(2.dp))
                 Text(
-                    "📍 $deviceName",
+                    deviceName,
                     style = MaterialTheme.typography.labelMedium,
                     color = TextSecondary,
                 )
