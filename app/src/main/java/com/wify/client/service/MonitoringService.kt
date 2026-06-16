@@ -65,7 +65,7 @@ class MonitoringService : Service() {
     private fun buildNotification() =
         NotificationCompat.Builder(this, CHANNEL_MONITOR)
             .setSmallIcon(R.drawable.ic_stat_wify)
-            .setContentTitle("W.I.F.Y 모니터링 중")
+            .setContentTitle("WIFY 모니터링 중")
             .setContentText("등록된 기기의 낙상을 감지하고 있습니다.")
             .setOngoing(true)
             .setPriority(NotificationCompat.PRIORITY_LOW)
