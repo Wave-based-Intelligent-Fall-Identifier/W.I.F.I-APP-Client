@@ -2,9 +2,11 @@ package com.wify.client.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -19,13 +21,20 @@ import androidx.compose.ui.unit.sp
 import com.wify.client.data.model.LogType
 import com.wify.client.ui.theme.TextSecondary
 
-/** 로그 행 — 좌측 경고 아이콘 + 메시지 + 우측 시각, 상태색 박스 */
+/**
+ * 로그 행 — 좌측 경고 아이콘 + 메시지(+기기 이름) + 우측 시각, 상태색 박스.
+ *
+ * @param deviceName null 이 아니면 메시지 아래에 어떤 기기의 로그인지 표시.
+ *   기기 상세 화면처럼 단일 기기 맥락에선 null 로 두고, 전체 기록 화면처럼
+ *   여러 기기 로그가 섞일 때만 전달한다.
+ */
 @Composable
 fun LogRow(
     type: LogType,
     message: String,
     timeLabel: String,
     modifier: Modifier = Modifier,
+    deviceName: String? = null,
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically,
@@ -38,12 +47,21 @@ fun LogRow(
     ) {
         Text("⚠", color = type.foreground(), fontSize = 16.sp)
         Spacer(Modifier.width(10.dp))
-        Text(
-            message,
-            style = MaterialTheme.typography.titleMedium,
-            color = MaterialTheme.colorScheme.onSurface,
-            modifier = Modifier.weight(1f),
-        )
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                message,
+                style = MaterialTheme.typography.titleMedium,
+                color = MaterialTheme.colorScheme.onSurface,
+            )
+            if (deviceName != null) {
+                Spacer(Modifier.height(2.dp))
+                Text(
+                    "📍 $deviceName",
+                    style = MaterialTheme.typography.labelMedium,
+                    color = TextSecondary,
+                )
+            }
+        }
         Text(timeLabel, style = MaterialTheme.typography.labelMedium, color = TextSecondary)
     }
 }

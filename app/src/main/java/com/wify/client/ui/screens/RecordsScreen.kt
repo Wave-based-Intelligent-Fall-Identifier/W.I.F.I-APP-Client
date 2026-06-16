@@ -119,6 +119,9 @@ fun RecordsScreen(
         }
 
         // 본문: 로그 리스트
+        // 전체 보기일 때만 각 로그에 기기 이름을 표시(특정 기기로 필터링하면 중복이라 생략).
+        val deviceNames = remember(state.devices) { state.devices.associate { it.id to it.name } }
+        val showDeviceName = state.selectedDeviceId == null
         LazyColumn(
             modifier = Modifier.fillMaxWidth(),
             verticalArrangement = Arrangement.spacedBy(10.dp),
@@ -128,6 +131,11 @@ fun RecordsScreen(
                     type = log.type,
                     message = log.message,
                     timeLabel = log.timeLabel,
+                    deviceName = if (showDeviceName) {
+                        deviceNames[log.deviceId] ?: log.deviceId
+                    } else {
+                        null
+                    },
                 )
             }
         }
